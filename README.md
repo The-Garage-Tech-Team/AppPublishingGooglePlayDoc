@@ -10,8 +10,9 @@
 - [Pre-Publishing](#PrePublish)
   * [Change Package Name](#Change-Package-Name)
   * [Privacy Policy](#Privacy-Policy)
+  * [Adding a Launcher Icon](#Adding-a-Launcher-Icon)
 - [Release & Publishing](#Release-&-Publishing)
-  * [Git Init](#Git-Init)
+  * [Signing the app](#Signing-the-app)
   * [Common Errors](#Common-Errors)
 - [Resources](#Resources)
   * [Documentation](#Documentation)
@@ -27,8 +28,8 @@
 <a name="Video-Links"/>
 <a name="Privacy-Policy"/>
 <a name="Resources"/>
-<a name="Git-Push"/>
-<a name="Git-Pull"/>
+<a name="Signing-the-app"/>
+<a name="Adding-a-Launcher-Icon"/>
 
 
 
@@ -79,6 +80,8 @@ Here in this [link](https://github.com/fluttercommunity/flutter_launcher_icons) 
 
 Application signing allows developers to identify the author of the application and to update their application without creating complicated interfaces and permissions. Every application that is run on the Android platform must be signed by the developer.
 
+![](https://developer.android.com/static/studio/images/publish/appsigning_googleplayappsigningdiagram_2x.png)
+
 On Android, there are two signing keys:
 * **Deployment** : The end-users download the .apk signed with the ‘deployment key’
 * **Upload** : An ‘upload key’ is used to authenticate the .aab / .apk uploaded by developers onto the Play Store and is re-signed with the deployment key once in the Play Store. 
@@ -88,6 +91,53 @@ There are 2 ways to create an upload key:
 
 * Following the [Android Studio key generation steps](https://developer.android.com/studio/publish/app-signing#sign-apk)
 * Running the following at the command line:
+
+On Mac/Linux, use the following command:
+
+```
+keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+```
+ 
+On Windows, use the following command:
+```
+keytool -genkey -v -keystore %userprofile%\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+```
+### Configure signing in gradle
+1. Go to Your Project/android/app/build.gradle file.
+2. Add the keystore information from your properties file before the android block:
+
+```
+   def keystoreProperties = new Properties()
+   def keystorePropertiesFile = rootProject.file('key.properties')
+   if (keystorePropertiesFile.exists()) {
+       keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+   }
+
+   android {
+         ...
+   }
+
+```
+Load the key.properties file into the keystoreProperties object.
+
+3. Find the ```buildTypes``` block and replace it with the following signing configuration info:
+```
+   signingConfigs {
+       release {
+           keyAlias keystoreProperties['keyAlias']
+           keyPassword keystoreProperties['keyPassword']
+           storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+           storePassword keystoreProperties['storePassword']
+       }
+   }
+   buildTypes {
+       release {
+           signingConfig signingConfigs.release
+       }
+   }
+```
+  
+
 
 
 
