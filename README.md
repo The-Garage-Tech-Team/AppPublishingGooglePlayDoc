@@ -13,6 +13,7 @@
   * [Adding a Launcher Icon](#Adding-a-Launcher-Icon)
 - [Release & Publishing](#Release-&-Publishing)
   * [Signing the app](#Signing-the-app)
+  * [Prepare your release](#Prepare-your-release)
   * [Common Errors](#Common-Errors)
 - [Resources](#Resources)
   * [Documentation](#Documentation)
@@ -30,6 +31,10 @@
 <a name="Resources"/>
 <a name="Signing-the-app"/>
 <a name="Adding-a-Launcher-Icon"/>
+<a name="Prepare-your-release"/>
+<a name="Adding-a-Launcher-Icon"/>
+<a name="Adding-a-Launcher-Icon"/>
+
 
 
 
@@ -102,7 +107,7 @@ On Windows, use the following command:
 ```
 keytool -genkey -v -keystore %userprofile%\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
 ```
-### Configure signing in gradle
+#### Step 2: Configure signing in gradle
 1. Go to Your Project/android/app/build.gradle file.
 2. Add the keystore information from your properties file before the android block:
 
@@ -136,7 +141,18 @@ Load the key.properties file into the keystoreProperties object.
        }
    }
 ```
-  
+
+### Prepare your release
+
+#### Step 1: Creating developer account
+
+
+ * Go to [Google Play Console](https://play.google.com/console/u/0/signup) and create an account for develeoper .
+ 
+ **Note** : Google Play charges a $25 one-time developer fee.
+ * 
+ 
+
 
 
 
