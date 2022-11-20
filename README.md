@@ -38,7 +38,7 @@
 
 
 
-## Change Package Name
+### Change Package Name
 You need to use a different **package name** because "com.example" is restricted
 Make sure you choose a package name that is suitable over the life of your application. You cannot change the package name after you distribute your application to users.
 
@@ -62,18 +62,32 @@ defaultConfig {
 3. You'll need to re-sync Gradle and rebuild the project after this, of course. :)
 
 
-## Privacy Policy
+### Privacy Policy
 
 Your mobile app (iOS, Android, Windows, BlackBerry) must have a Privacy Policy if the app collects personal data from users.
 
 There are some websites that provides a tamplate for such thing. Click [Here](https://www.termsfeed.com/blog/sample-mobile-app-privacy-policy-template/)
 
-## Adding a Launcher Icon
+### Adding a Launcher Icon
 
 Here in this [link](https://github.com/fluttercommunity/flutter_launcher_icons) how to add a launcher icon for your app using a **Flutter Launcher Icons** Package
 
 
 ## Release & Publishing
+
+### Signing the app
+
+Application signing allows developers to identify the author of the application and to update their application without creating complicated interfaces and permissions. Every application that is run on the Android platform must be signed by the developer.
+
+On Android, there are two signing keys:
+* **Deployment** : The end-users download the .apk signed with the ‘deployment key’
+* **Upload** : An ‘upload key’ is used to authenticate the .aab / .apk uploaded by developers onto the Play Store and is re-signed with the deployment key once in the Play Store. 
+
+#### Step 1: Create an upload key:
+There are 2 ways to create an upload key:
+
+* Following the [Android Studio key generation steps](https://developer.android.com/studio/publish/app-signing#sign-apk)
+* Running the following at the command line:
 
 
 
@@ -86,13 +100,13 @@ The `git status`command  lets you see which changes have been staged, which have
 ## Resources
 
 
-## Documentation
+### Documentation
 
 
 * [Build and release an Android app](https://docs.flutter.dev/deployment/android)
 
 
-## Video Links
+### Video Links
 
 
 * #### [Change Package Name](https://www.youtube.com/watch?v=qo-iCbPAi5k&ab_channel=CodeProf)
