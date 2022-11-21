@@ -65,7 +65,7 @@ defaultConfig {
 ```
 2. Then you can right-click on the package in your main/java folder and select Refactor > Rename. Select Refactor Package and type the new one you just used in applicationId.
 
-3. You'll need to re-sync Gradle and rebuild the project after this, of course. :)
+3. You'll need to re-sync Gradle and rebuild the project after this.
 
 
 ### Privacy Policy
