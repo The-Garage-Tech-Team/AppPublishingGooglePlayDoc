@@ -72,6 +72,8 @@ defaultConfig {
 
 Your mobile app (iOS, Android, Windows, BlackBerry) must have a Privacy Policy if the app collects personal data from users.
 
+**A Privacy Policy for Android Apps is Required by Google Play.**
+
 There are some websites that provides a tamplate for such thing. Click [Here](https://www.termsfeed.com/blog/sample-mobile-app-privacy-policy-template/)
 
 ### Adding a Launcher Icon
@@ -147,7 +149,7 @@ Load the key.properties file into the keystoreProperties object.
 #### Step 1: Creating developer account
 
 
- * Go to [Google Play Console](https://play.google.com/console/u/0/signup) and create an account for develeoper .
+ * Go to [Google Play Console](https://play.google.com/console/u/0/signup) and create an account for developer .
  
  **Note** : Google Play charges a $25 one-time developer fee.
  * 
