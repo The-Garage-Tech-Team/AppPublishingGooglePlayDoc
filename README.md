@@ -11,7 +11,7 @@
   * [Change Package Name](#Change-Package-Name)
   * [Privacy Policy](#Privacy-Policy)
   * [Adding a Launcher Icon](#Adding-a-Launcher-Icon)
-- [Release & Publishing](#Release-&-Publishing)
+- [Release](#Release)
   * [Signing the app](#Signing-the-app)
   * [Prepare your release](#Prepare-your-release)
   * [Common Errors](#Common-Errors)
@@ -23,7 +23,7 @@
 
 <a name="PrePublish"/>
 <a name="Change-Package-Name"/>
-<a name="Release-&-Publishing"/>
+<a name="Release"/>
 <a name="Common-Errors"/>
 <a name="Documentation"/>
 <a name="Video-Links"/>
@@ -81,7 +81,9 @@ There are some websites that provides a tamplate for such thing. Click [Here](ht
 Here in this [link](https://github.com/fluttercommunity/flutter_launcher_icons) how to add a launcher icon for your app using a **Flutter Launcher Icons** Package
 
 
-## Release & Publishing
+## Release
+
+
 
 ### Signing the app
 
@@ -152,7 +154,8 @@ Load the key.properties file into the keystoreProperties object.
  * Go to [Google Play Console](https://play.google.com/console/u/0/signup) and create an account for developer .
  
  **Note** : Google Play charges a $25 one-time developer fee.
- * 
+#### Step 2: Setting the app for release
+In this video [here](https://www.youtube.com/watch?v=DNXME6ANmR4&ab_channel=tutorialsEU) , detailed instruction on how to set your app for release. Starts in watching after 2:29 mins in the video.
  
 
 
@@ -161,8 +164,25 @@ Load the key.properties file into the keystoreProperties object.
 
 ### Common Errors
 
-The `git status`command  lets you see which changes have been staged, which haven’t, and which files aren’t being tracked by Git. Status output does not show you any information regarding the committed project history. For this, you need to use `git log`.
+#### Error: Your Android App Bundle Is Signed With The Wrong Key. Ensure That Your App Bundle Is Signed With The Correct Signing Key And Try Again.
+#### Solution 1:
+* Rebuild the project and generate signed apk once again !
+#### Solution 2:
+* click and upload with new keystore file that created manually.
+![photo](https://i.stack.imgur.com/0SVBu.png)
 
+
+
+#### Error: App URL not found in Google Play (for internal testers)
+![not found](https://i.stack.imgur.com/sG5RF.png)
+#### Solution:
+
+1. Open your app → Release → Testing → Internal testing
+2. Tap on Testers → Scroll down and you will see How testers join your test at the bottom.
+
+![image](https://i.stack.imgur.com/e12dl.png)
+
+After that testers should accept the inventation, install app from Google Play and check the updates
 
 
 ## Resources
@@ -171,7 +191,7 @@ The `git status`command  lets you see which changes have been staged, which have
 ### Documentation
 
 
-* [Build and release an Android app](https://docs.flutter.dev/deployment/android)
+* #### [Build and release an Android app](https://docs.flutter.dev/deployment/android)
 
 
 ### Video Links
