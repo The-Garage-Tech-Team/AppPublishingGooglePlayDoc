@@ -184,6 +184,25 @@ In this video [here](https://www.youtube.com/watch?v=DNXME6ANmR4&ab_channel=tuto
 
 After that testers should accept the inventation, install app from Google Play and check the updates
 
+#### Error: .png failed to read PNG signature: file does not start with PNG signature.
+![photo](https://i.stack.imgur.com/S03gn.png)
+
+#### Solution 1:
+* In build.gradle
+```
+aaptOptions {
+    cruncherEnabled = false
+}
+```
+* Delete content inside C:\Users\.gradle\caches (or ~/.gradle/caches for Mac and Linux).
+
+* Restart Android Studio
+
+#### Solution 2:
+* Add  ``` cruncherEnabled = false ``` in build.gradle
+
+#### Solution 3:
+* Convert the image into png rather than just changing the extension.
 
 ## Resources
 
