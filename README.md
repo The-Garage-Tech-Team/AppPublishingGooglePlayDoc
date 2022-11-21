@@ -155,7 +155,7 @@ Load the key.properties file into the keystoreProperties object.
  
  **Note** : Google Play charges a $25 one-time developer fee.
 #### Step 2: Setting the app for release
-In this video [here](https://www.youtube.com/watch?v=DNXME6ANmR4&ab_channel=tutorialsEU) , detailed instruction on how to set your app for release. Starts in watching after 2:29 mins in the video.
+In this video [here](https://www.youtube.com/watch?v=DNXME6ANmR4&ab_channel=tutorialsEU) , detailed instruction on how to set your app for release. Start watching after 2:29 mins.
  
 
 
