@@ -1,7 +1,6 @@
 # App Publishing in Google Play
 
 
-![Image of Garage](https://pbs.twimg.com/profile_banners/1473251190611877889/1643650277/1500x500)
 
 
 # The Complete Guide for Publishing your App in Play Store
